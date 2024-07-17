@@ -1,0 +1,19 @@
+<section>
+  @for (vodka of vodka; track $index) {
+    <hr>
+    <div class="bebida">
+    <H2>{{vodka.strDrink}}</H2>
+    
+    <p><span>Instrucciones: <span>{{vodka.strInstructions}}</span></span></p>
+    <h4>Ingredientes: </h4>
+    <ul id="list">
+      @for (ingrediente of vodka.ingredients; track $index) {
+        <li>{{ingrediente}}</li>
+      }
+  </ul>
+    <img [src]="vodka.strDrinkThumb" alt="">
+    <h5>Categoría: {{vodka.strCategory}}</h5>
+  </div>
+  }
+
+</section>

@@ -1,0 +1,19 @@
+<section>
+    @for (margarita of margarita; track $index) {
+      <hr>
+      <div class="bebida">
+      <H2>{{margarita.strDrink}}</H2>
+      
+      <p><span>Instrucciones: <span>{{margarita.strInstructions}}</span></span></p>
+      <h4>Ingredientes: </h4>
+      <ul id="list">
+        @for (ingrediente of margarita.ingredients; track $index) {
+          <li>{{ingrediente}}</li>
+        }
+    </ul>
+      <img [src]="margarita.strDrinkThumb" alt="">
+      <h5>Categoría: {{margarita.strCategory}}</h5>
+    </div>
+    }
+
+  </section>
